@@ -28,11 +28,12 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-color:chartreuse;
 }
 
 h1 {
   font-size: 3.2em;
-  line-height: 1.1;
+  line-height: 3.1;
 }
 
 button {
@@ -65,4 +66,12 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+.card{
+  background-color: chartreuse;
+}
+.personajes{
+  background-color:aqua;
+
+  
 }

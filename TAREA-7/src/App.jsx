@@ -1,11 +1,10 @@
-// src/App.jsx
 import React from'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import HomePage from'./HomePage';
-import CharacterPage from'./pages/CharacterPage';
-import EpisodesPage from'./pages/EpisodesPage';
-import NotFoundPage from'./pages/NotFoundPage';
-
+import './App.css';
+import HomePage from './page/error/Homepage/HomePage';
+import EpisodesPage from './page/EpisodePage';
+import CharacterPage from './page/CharacterPage';
+import NotFound from './page/error/notFound';
 
 function App() {
   return (
@@ -14,7 +13,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/characters" element={<CharacterPage />} />
         <Route path="/episodes" element={<EpisodesPage />} />
-        <Route path="*" element={<NotFoundPage />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
   );

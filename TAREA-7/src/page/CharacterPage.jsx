@@ -1,7 +1,7 @@
-// src/pages/CharacterPage.jsx
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react'
 
-function CharacterPage() {
+
+const CharacterPage = () => {
   const [characters, setCharacters] = useState([]);
   const [page, setPage] = useState(1);
 
@@ -16,12 +16,13 @@ function CharacterPage() {
   const handlePreviousPage = () => setPage(page > 1 ? page - 1 : 1);
 
   return (
-    <div>
+    <div className='personajes'>
       <h1>Personajes de Rick and Morty</h1>
       <ul>
         {characters.map((character) => (
           <li key={character.id}>
             {character.name}
+            <img src={character.image} alt={character.name}></img>
           </li>
         ))}
       </ul>
@@ -32,7 +33,7 @@ function CharacterPage() {
         Siguiente
       </button>
     </div>
-  );
+  )
 }
 
-export default CharacterPage;
+export default CharacterPage

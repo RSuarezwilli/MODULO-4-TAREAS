@@ -1,4 +1,3 @@
-// src/pages/EpisodesPage.jsx
 import React, { useState, useEffect } from 'react';
 
 function EpisodesPage() {
@@ -16,12 +15,13 @@ function EpisodesPage() {
   const handlePreviousPage = () => setPage(page > 1 ? page - 1 : 1);
 
   return (
-    <div>
+    <div className='card'>
       <h1>Episodios de Rick and Morty</h1>
       <ul>
         {episodes.map((episode) => (
           <li key={episode.id}>
             {episode.name} - {episode.air_date}
+            
           </li>
         ))}
       </ul>
@@ -31,6 +31,7 @@ function EpisodesPage() {
       <button onClick={handleNextPage}>
         Siguiente
       </button>
+      
     </div>
   );
 }
